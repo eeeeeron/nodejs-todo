@@ -12,6 +12,6 @@ var knex = require('knex')({
     }
 });
 
-knex.on('query', console.log)
+//knex.on('query', console.log)
 
 module.exports = knex
