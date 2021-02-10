@@ -27,10 +27,26 @@ class TaskController {
     listarUmaTarefa(request, response){
         const {id} = request.params
 
-        database.select("*").table("tasks").where(database.raw('?? = ?', ['id', id])).then(tarefa=>{
-            
+        database.select("*").table("tasks").where({
+            id: database.raw('?', [id])
+        }).then(tarefa=>{
             response.json(tarefa)
         }).catch(error => {
+            console.log(error)
+        })
+    }
+
+    atualizarTarefa(request, response){
+        const {id} = request.params
+        const {descricao} = request.body
+
+        database.where({
+            id: database.raw('?', [id])
+        }).update({
+            descricao: database.raw('?', [descricao])
+        }).table("tasks").then(data=>{
+            response.json({message:"Tarefa atualizada com sucesso."})
+        }).catch(error=>{
             console.log(error)
         })
     }

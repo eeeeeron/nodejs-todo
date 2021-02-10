@@ -5,12 +5,13 @@ var knex = require('knex')({
         user: 'onlinetutorial',
         password: 'online',
         database: 'todo',
+        port: 1433,
         "options": {
             "enableArithAbort": true
         }
     }
 });
 
-//knex.on('query', console.log)
+knex.on('query', console.log)
 
 module.exports = knex
