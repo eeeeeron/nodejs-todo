@@ -44,4 +44,4 @@ Parâmetro enviado na URL, no caso, o código de identificação da tarefa que d
 
 [/delete/tarefa/1](http://localhost:5000/delete/tarefa/1)
 
-Parâmetro enviado na URL, no caso, o código de identificação da tarefa que deseja alterar, sem parâmetro enviado no *body*
+Parâmetro enviado na URL, no caso, o código de identificação da tarefa que deseja excluir, sem parâmetro enviado no *body*
