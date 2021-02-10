@@ -10,10 +10,10 @@ Sem parâmetros enviados na URL, parâmetros enviados no *body*
 
 ##### Exemplo
 
-> {
->   "tarefa":"Terminar artigo de Node.js",\n
->   "descricao":"Explicar como funciona a tecnologia",\n
->   "responsavel":"Victor Hugo"
+> {<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;"tarefa":"Terminar artigo de Node.js",<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;"descricao":"Explicar como funciona a tecnologia",<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;"responsavel":"Victor Hugo"<br>
 > }
 
 ### Listagem de tarefas
@@ -26,22 +26,22 @@ Sem parâmetros enviados na URL, sem parâmetros enviados no *body*
 
 [/tarefa/1](http://localhost:5000/tarefa/1)
 
-parâmetro enviado na URL, no caso, o código de identificação da tarefa, sem parâmetros enviados no *body*
+Parâmetro enviado na URL, no caso, o código de identificação da tarefa, sem parâmetros enviados no *body*
 
 ### Alteração de tarefa
 
 [/atualizar/tarefa/1](http://localhost:5000/atualizar/tarefa/1)
 
-parâmetro enviado na URL, no caso, o código de identificação da tarefa que deseja alterar, parâmetro enviado no *body*, no caso o campo "descrição" passando o texto alterado
+Parâmetro enviado na URL, no caso, o código de identificação da tarefa que deseja alterar, parâmetro enviado no *body*, no caso o campo "descrição" passando o texto alterado
 
 ##### Exemplo
 
-> {
->   "descricao":"Nova descrição",
+> {<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;"descricao":"Nova descrição"<br>
 > }
 
 ### Exclusão de tarefa
 
 [/delete/tarefa/1](http://localhost:5000/delete/tarefa/1)
 
-parâmetro enviado na URL, no caso, o código de identificação da tarefa que deseja alterar, sem parâmetro enviado no *body*
+Parâmetro enviado na URL, no caso, o código de identificação da tarefa que deseja alterar, sem parâmetro enviado no *body*
