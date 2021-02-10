@@ -11,8 +11,8 @@ Sem parâmetros enviados na URL, parâmetros enviados no *body*
 ##### Exemplo
 
 > {
->   "tarefa":"Terminar artigo de Node.js",
->   "descricao":"Explicar como funciona a tecnologia",
+>   "tarefa":"Terminar artigo de Node.js",\n
+>   "descricao":"Explicar como funciona a tecnologia",\n
 >   "responsavel":"Victor Hugo"
 > }
 
@@ -33,6 +33,12 @@ parâmetro enviado na URL, no caso, o código de identificação da tarefa, sem 
 [/atualizar/tarefa/1](http://localhost:5000/atualizar/tarefa/1)
 
 parâmetro enviado na URL, no caso, o código de identificação da tarefa que deseja alterar, parâmetro enviado no *body*, no caso o campo "descrição" passando o texto alterado
+
+##### Exemplo
+
+> {
+>   "descricao":"Nova descrição",
+> }
 
 ### Exclusão de tarefa
 
