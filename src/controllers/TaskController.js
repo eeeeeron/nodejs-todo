@@ -50,6 +50,18 @@ class TaskController {
             console.log(error)
         })
     }
+
+    removerTarefa(request, response){
+        const {id} = request.params
+        
+        database.where({
+            id: database.raw('?', [id])
+        }).del().table("tasks").then(data=>{
+            response.json({message: "Tarefa removida com sucesso."})
+        }).catch(error=>{
+            response.log(error)                
+        })
+    }
 }
 
 module.exports = new TaskController()
